@@ -1,0 +1,44 @@
+.slider-container {
+	width: 100%;
+	position: relative;
+}
+
+.slider {
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	padding-inline: 1rem;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+	scrollbar-width: none; /* change to set visible the scrollbar */
+}
+
+.slider-button {
+	color: white;
+	height: 100%;
+	cursor: pointer;
+	width: 40px;
+	text-align: center;
+	align-content: center;
+	border: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.left-button {
+	left: 0;
+	background: linear-gradient(to right, black, 50%, transparent);
+}
+
+.right-button {
+	right: 0;
+	background: linear-gradient(to left, black, 50%, transparent);
+}
+
+@media screen and (max-width: 754px) {
+	.slider-button {
+		display: none;
+	}
+}

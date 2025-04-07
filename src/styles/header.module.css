@@ -1,0 +1,57 @@
+.header {
+	background: transparent;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	padding: 1rem;
+	animation: changeBackground linear forwards;
+	animation-timeline: scroll();
+	animation-range: 0 50px;
+}
+
+.titleContainer a {
+	-webkit-tap-highlight-color: transparent;
+	width: auto;
+	display: flex;
+	transform-origin: left center;
+	transition: transform color 0.3s ease-in-out;
+}
+
+.webTitle::selection {
+	user-select: none;
+	background: transparent;
+	color: inherit;
+}
+
+.titleContainer a:hover {
+	transform: scale(1.1);
+}
+
+.webTitle {
+	font-weight: 600;
+}
+
+@keyframes changeBackground {
+	100% {
+		background: #0a1128;
+	}
+}
+
+@media screen and (max-width: 754px) {
+	.header {
+		position: sticky;
+	}
+
+	.titleContainer a:hover {
+		transform: none;
+	}
+
+	.titleContainer a:active {
+		color: rgb(63, 122, 172);
+		background: none;
+	}
+}

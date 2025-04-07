@@ -1,0 +1,51 @@
+.bigShow {
+	aspect-ratio: 16/9;
+	position: relative;
+	width: 100dvw;
+	background-size: cover;
+	background-position: center;
+	max-height: 100dvh;
+	mask-image: linear-gradient(to top, transparent, 20%, black);
+}
+
+.info {
+	z-index: 10;
+	position: absolute;
+	bottom: 10vw;
+	left: 5vw;
+}
+
+.infoButton span {
+	font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.infoIcon {
+	width: clamp(24px, 2vw, 30px);
+	height: clamp(24px, 2vw, 30px);
+}
+
+.title {
+	font-size: clamp(1rem, 4vw, 4rem);
+	text-wrap: pretty;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.infoButton {
+	padding-inline: clamp(1rem, 2.5vw, 2em);
+	padding-block: clamp(0.5rem, 2vw, 1rem);
+	z-index: 10;
+	width: fit-content;
+	align-items: center;
+	display: flex;
+	gap: 8px;
+	color: white;
+	border: solid 1px transparent;
+	border-radius: 10px;
+	background-color: #00000080;
+	transition: border-color 0.3s ease;
+}
+
+.infoButton:hover {
+	border-color: white;
+}

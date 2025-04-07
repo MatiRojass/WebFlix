@@ -1,0 +1,11 @@
+.shows-section {
+	content-visibility: auto;
+	margin-bottom: 1rem;
+	& h2 {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.section-title {
+	padding: 1rem;
+}

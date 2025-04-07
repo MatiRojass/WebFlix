@@ -1,0 +1,162 @@
+.container {
+	height: auto;
+}
+
+.showDetailBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	filter: blur(10px);
+	opacity: 0.3;
+	z-index: -1;
+}
+
+.infoContainer {
+	width: 100dvw;
+	max-width: 800px;
+	padding: 1rem;
+	margin: 0 auto;
+	min-height: 100dvh;
+	margin-top: 5rem;
+	display: grid;
+	grid-template-rows: min-content;
+	grid-template-areas: 'poster details details' 'seasons seasons seasons';
+}
+
+.side {
+	grid-area: poster;
+	padding-right: 1rem;
+	margin: 0 auto;
+}
+
+.poster {
+	aspect-ratio: 2/3;
+	width: clamp(150px, 20vw, 350px);
+}
+
+.details {
+	grid-area: details;
+}
+
+.titleContainer {
+	margin-bottom: 1rem;
+}
+
+.tagline {
+	font-size: medium;
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.info {
+	margin-bottom: 2rem;
+}
+
+.info > * {
+	margin-bottom: 10px;
+}
+
+.shortInfo {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 1rem;
+}
+
+.infoPill {
+	display: flex;
+	gap: 5px;
+}
+
+.webSite {
+	& a {
+		text-decoration: underline;
+		text-wrap: wrap;
+		word-break: break-all;
+	}
+}
+
+.genresList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.genre {
+	padding: 0.5rem 1rem;
+	background-color: rgb(51, 51, 101);
+	color: white;
+	border: none;
+	border-radius: 5px;
+}
+
+.seasons {
+	grid-area: seasons;
+	margin-top: 2rem;
+}
+
+.seasonsTitle {
+	margin-bottom: 1rem;
+}
+
+.seasonDetail {
+	width: 100%;
+	background: transparent;
+	padding: 1rem;
+	border: 1px solid gray;
+	border-radius: 10px;
+	transition: all 0.5s ease;
+
+	& summary {
+		list-style: none;
+		display: flex;
+		font-weight: 600;
+		font-size: large;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+}
+
+.seasonDetail[open] {
+	box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.203);
+
+	& summary i {
+		transform: rotate(180deg);
+	}
+}
+
+.seasonsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.seasonInfo {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+	gap: 0.5rem;
+}
+
+.seasonDetail i {
+	padding: 5px;
+	transform-origin: center;
+	transition: all 0.35s ease;
+}
+
+.seasonDetail p {
+	transition: opacity 0.5s ease;
+}
+
+@media screen and (max-width: 754px) {
+	.infoContainer {
+		grid-template-areas: 'poster' 'details' 'seasons';
+	}
+}

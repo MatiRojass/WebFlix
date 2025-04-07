@@ -1,0 +1,19 @@
+.footer {
+	text-align: center;
+	margin-top: 3rem;
+	padding: 1rem;
+	background-color: #0f1a3b;
+	color: #ccc;
+}
+
+.license {
+	margin: 1rem 0 0.5rem;
+}
+
+.projectInfo {
+	margin-block: 0.5rem;
+}
+
+.link {
+	color: #00aced;
+}
