@@ -26,7 +26,7 @@ const Footer = () => {
 			</p>
 			<p className={styles.gitHub}>
 				<a
-					href='https://github.com/tu-usuario/webflix'
+					href='https://github.com/MatiRojass/WebFlix'
 					target='_blank'
 					className={styles.link}
 				>
